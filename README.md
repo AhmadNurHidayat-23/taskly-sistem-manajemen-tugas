@@ -32,7 +32,7 @@ composer run setup
 php artisan serve --host=127.0.0.1
 ```
 
-Open [http://127.0.0.1:8000](http://127.0.0.1:8000). The setup command installs dependencies, creates `.env`, generates the application key, runs migrations, and builds assets. Internet access is needed during installation and the initial font build; the built application serves its fonts locally.
+Open [http://127.0.0.1:8000](http://127.0.0.1:8000). The setup command installs dependencies, creates `.env`, generates the application key, runs migrations, and builds assets. Internet access is needed during dependency installation. Inter fonts are bundled in the source and served locally; asset builds do not fetch external fonts.
 
 For an existing checkout with dependencies installed, run `php artisan serve --host=127.0.0.1`. You do not need MySQL or a running MAMP database.
 
