@@ -1,4 +1,4 @@
-# Taskly
+# Taskly — Sistem Manajemen Tugas
 
 Aplikasi pengelola tugas sederhana menggunakan Laravel 13, Blade, SQLite, dan JavaScript. Tampilannya minimalis dan responsif untuk komputer maupun ponsel.
 
@@ -14,8 +14,8 @@ Aplikasi pengelola tugas sederhana menggunakan Laravel 13, Blade, SQLite, dan Ja
 Siapkan PHP 8.3+ dengan ekstensi SQLite, Composer, Node.js 22.12+, dan npm.
 
 ```sh
-git clone https://github.com/AhmadNurHidayat-23/taskly.git
-cd taskly
+git clone https://github.com/AhmadNurHidayat-23/taskly-sistem-manajemen-tugas.git
+cd taskly-sistem-manajemen-tugas
 composer run setup
 php artisan serve --host=127.0.0.1
 ```
