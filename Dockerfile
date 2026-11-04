@@ -40,7 +40,8 @@ COPY composer.json composer.lock ./
 RUN composer install --prefer-dist --no-interaction --no-progress --no-scripts --no-autoloader
 COPY . .
 COPY --from=assets /app/public/build ./public/build
-RUN mkdir -p bootstrap/cache storage/framework/views \
+RUN test ! -e .env && test ! -e database/dockerignore-canary.sqlite \
+    && mkdir -p bootstrap/cache storage/framework/views \
     && composer dump-autoload --no-interaction --no-scripts \
     && php artisan package:discover --ansi --no-interaction \
     && APP_KEY="$(php -r 'echo "base64:".base64_encode(random_bytes(32));')" \
