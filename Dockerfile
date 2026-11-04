@@ -44,7 +44,7 @@ RUN mkdir -p bootstrap/cache storage/framework/views \
     && composer dump-autoload --no-interaction --no-scripts \
     && php artisan package:discover --ansi --no-interaction \
     && APP_KEY="$(php -r 'echo "base64:".base64_encode(random_bytes(32));')" \
-       php artisan test --compact --no-interaction
+       php vendor/bin/phpunit --colors=never
 
 FROM php-base AS runtime
 WORKDIR /var/www/html
